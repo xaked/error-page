@@ -116,7 +116,7 @@ export default {
         this.errorText = 'The server is delivering only part of the resource due to a range header sent by the client';
         break;
       case 300:
-        this.errorText = 'A link list. The user can select a link and go to that location. Maximum five addresses';
+        this.errorText = 'A link list';
         break;
       case 301:
         this.errorText = 'The requested page has moved to a new URL';
@@ -143,7 +143,7 @@ export default {
         this.errorText = 'The request cannot be fulfilled due to bad syntax';
         break;
       case 401:
-        this.errorText = 'The request was a legal request, but the server is refusing to respond to it. For use when authentication is possible but has failed or not yet been provided';
+        this.errorText = 'The request was a legal request, but the server is refusing to respond to it';
         break;
       case 402:
         this.errorText = 'Payment required';
@@ -182,7 +182,7 @@ export default {
         this.errorText = 'The server will not accept the request, because the request entity is too large';
         break;
       case 414:
-        this.errorText = 'The server will not accept the request, because the URL is too long. Occurs when you convert a POST request to a GET request with a long query information';
+        this.errorText = 'The server will not accept the request, because the URL is too long';
         break;
       case 415:
         this.errorText = 'The server will not accept the request, because the media type is not supported';
