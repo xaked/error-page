@@ -16,7 +16,7 @@
         <div
           v-if="isError"
           class="error">
-          <p class="mb-1">Error!1@</p>
+          <p class="mb-1">Error {{ error }}!1@</p>
           <p>{{ errorText }}</p>
           <div class="links">
             <ul>

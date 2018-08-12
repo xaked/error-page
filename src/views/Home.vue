@@ -29,7 +29,7 @@ export default {
   created() {
     this.errorNumber = this.$route.query.error >= 1 ? Number(this.$route.query.error) : 0;
     const a = document.createElement('a');
-    a.href = this.$route.query.ref || window.location.href;
+    a.href = decodeURIComponent(this.$route.query.ref) || window.location.href;
     this.host = a.hostname;
   }
 };
