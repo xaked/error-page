@@ -27,9 +27,17 @@ export default {
     };
   },
   created() {
+    let ref = decodeURIComponent(this.$route.query.ref);
+    if (this.$route.query.ref) {
+      if (ref.substring(0, 4) !== 'http') {
+        ref = `http://${ref}`;
+      }
+    } else {
+      ref = window.location.href;
+    }
     this.errorNumber = this.$route.query.error >= 1 ? Number(this.$route.query.error) : 0;
     const a = document.createElement('a');
-    a.href = decodeURIComponent(this.$route.query.ref) || window.location.href;
+    a.href = ref;
     this.host = a.hostname;
   }
 };
