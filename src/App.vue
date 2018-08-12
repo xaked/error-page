@@ -12,6 +12,22 @@
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic');
 
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 901px) {
+  html {
+    font-size: 18px;
+  }
+}
+
 html, body {
   width: 100%;
   height: 100%;

@@ -7,8 +7,8 @@
   <div class="main container-fluid">
     <div class="row justify-content-center text-center">
       <div class="col-xl-6 col-lg-8 col-md-10 col-sm-12 m-auto pt-5">
-        <p class="title my-0">@{{ host }}</p>
-        <p class="title-sm my-0">Stop right there!</p>
+        <p class="title my-0">Stop right there!</p>
+        <p class="title-sm my-0">@{{ host }}</p>
         <img
           class="my-4"
           src="https://placeimg.com/1280/720/animals/grayscale"
@@ -16,7 +16,7 @@
         <div
           v-if="isError"
           class="error">
-          <p class="mb-1">Error {{ error }}!1@</p>
+          <p class="mb-1">Error <b>{{ error }}</b>!1@</p>
           <p>{{ errorText }}</p>
           <div class="links">
             <ul>
@@ -265,16 +265,17 @@ export default {
 
   p {
     color: #0e5977;
-    font-size: 2rem;
+    font-size: 1.5rem;
 
     &.title {
       color: darken(#0e5977, 5%);
-      text-transform: uppercase;
-      font-size: 4rem;
+      text-transform: capitalize;
+      font-size: 3rem;
     }
 
     &.title-sm {
-      font-size: 3rem;
+      text-transform: lowercase;
+      font-size: 2rem;
     }
   }
 
