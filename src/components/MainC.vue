@@ -42,12 +42,22 @@
             </ul>
           </div>
         </div>
+        <div class="links">
+          <ul>
+            <li><a
+              class="text-muted"
+              href="https://github.com/iSm1le">Developer</a></li>
+            <li><a class="text-muted"><b>Version:</b> {{ appVer }}</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { version } from '../../package.json';
+
 export default {
   name: 'Main',
   props: {
@@ -66,6 +76,11 @@ export default {
       errorText: null,
       href: null
     };
+  },
+  computed: {
+    appVer() {
+      return version;
+    }
   },
   created() {
     if (this.error > 0) {
