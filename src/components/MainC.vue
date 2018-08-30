@@ -6,48 +6,61 @@
 <template>
   <div class="main container-fluid">
     <div class="row justify-content-center text-center">
-      <div class="col-xl-6 col-lg-8 col-md-10 col-sm-12 m-auto pt-5">
+      <div class="col-xl-6 col-lg-8 col-md-10 col-sm-12 m-auto pt-2">
         <p class="title my-0">Stop right there!</p>
+        <hr class="my-0">
         <p class="title-sm my-0">@{{ host }}</p>
         <img
-          class="my-4"
+          class="my-2"
           src="https://placeimg.com/1280/720/animals/grayscale"
           alt="Error image">
         <div
           v-if="isError"
           class="error">
           <p class="mb-1">Error <b>{{ error }}</b>!1@</p>
-          <p>{{ errorText }}</p>
-          <div class="links">
+          <p class="mb-0 text-muted">{{ errorText }}</p>
+          <hr class="my-2">
+          <div class="links text-muted">
             <ul>
               <li><a
+                class="text-muted"
                 href="#"
                 onclick="history.go(-1);">Go back</a></li>
-              <li><a :href="href">Home</a></li>
-              <li><a href="https://google.com/">Leave from here</a></li>
+              <li><a
+                :href="href"
+                class="text-muted">Home</a></li>
+              <li><a
+                class="text-muted"
+                href="https://google.com/">Leave from here</a></li>
             </ul>
           </div>
         </div>
         <div
           v-else
           class="error">
-          <p>What are you doing here?</p>
-          <div class="links">
+          <p class="mb-0">What are you doing here?</p>
+          <hr class="my-2">
+          <div class="links text-muted">
             <ul>
               <li><a
+                class="text-muted"
                 href="#"
                 onclick="history.go(-1);">Go back</a></li>
-              <li><a :href="href">Home</a></li>
-              <li><a href="https://google.com/">Leave from here</a></li>
+              <li><a
+                :href="href"
+                class="text-muted">Home</a></li>
+              <li><a
+                class="text-muted"
+                href="https://google.com/">Leave from here</a></li>
             </ul>
           </div>
         </div>
-        <div class="links">
+        <div class="links text-muted">
           <ul>
             <li><a
               class="text-muted"
               href="https://github.com/iSm1le">Developer</a></li>
-            <li><a class="text-muted"><b>Version:</b> {{ appVer }}</a></li>
+            <li><a><b>Version:</b> {{ appVer }}</a></li>
           </ul>
         </div>
       </div>
@@ -232,16 +245,17 @@ export default {
 
   ul {
     display: inline-block;
+    font-size: .9rem;
     li {
       display: inline-block;
       list-style: none;
       a {
         text-decoration: none;
-        color: lighten(#0e5977, 5%);
+        /* color: lighten(#0e5977, 5%); */
         border-right: 2px solid #0e5977;
         display: block;
         padding: 0 7.5px;
-        &:hover {
+        /* &:hover {
           color: lighten(#0e5977, 10%);
         }
         &:active {
@@ -249,7 +263,7 @@ export default {
         }
         &:visited {
           color: lighten(#0e5977, 5%);
-        }
+        } */
       }
       &:last-child {
         a {
@@ -265,17 +279,17 @@ export default {
 
   p {
     color: #0e5977;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 
     &.title {
       color: darken(#0e5977, 5%);
       text-transform: capitalize;
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
 
     &.title-sm {
       text-transform: lowercase;
-      font-size: 2rem;
+      font-size: 1.75rem;
     }
   }
 
