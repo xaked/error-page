@@ -1,0 +1,17 @@
+dist: trusty
+sudo: required
+addons:
+  apt:
+    sources:
+      - git-core
+    packages:
+      - git
+language: node_js
+node_js:
+  - '10'
+cache:
+  directories:
+  - node_modules/
+script:
+- npm i
+- npm run lint
