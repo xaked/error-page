@@ -12,7 +12,7 @@
         <p class="title-sm my-0">@{{ host }}</p>
         <img
           class="my-2"
-          src="https://placeimg.com/1280/720/animals/grayscale"
+          src="https://source.unsplash.com/1280x720/?cat"
           alt="Error image">
         <div
           v-if="isError"
@@ -76,7 +76,7 @@ export default {
   props: {
     host: {
       'type': String,
-      'default': 'xaff.ru'
+      'default': 'xaked.com'
     },
     error: {
       'type': Number,
