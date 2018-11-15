@@ -1,8 +1,15 @@
 <!--
-  // Created on Sun Aug 12 2018
-  // Copyright © 2017-2018 Mikhail K. (iSm1le)
-  // Licensed under the Apache License, Version 2.0
-  -->
+ * @File:          MainC.vue
+ * @Project:       xaked-error-page
+ * @File Created:  Sunday, 12th August 2018 2:47:36 pm
+ * @Author:        Mikhail K. (iSm1le) <ism1le@xaked.com>
+ * -----
+ * @Last Modified: Thursday, 15th November 2018 4:43:51 pm
+ * @Modified By:   Mikhail K. (iSm1le) <ism1le@xaked.com>
+ * -----
+ * Copyright 2018 Mikhail K. (iSm1le)
+ * Licensed under the Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+-->
 <template>
   <div class="main container-fluid">
     <div class="row justify-content-center text-center">
